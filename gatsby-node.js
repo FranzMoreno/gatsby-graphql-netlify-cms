@@ -61,6 +61,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   price
                 }
               }
+              servicios {
+                titulo
+                descripcion
+              }
             }
           }
         }

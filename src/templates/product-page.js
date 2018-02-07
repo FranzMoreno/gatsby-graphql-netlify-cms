@@ -5,7 +5,7 @@ import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 
 export const ProductPageTemplate = ({
-  image, title, heading, description, intro, main, testimonials, fullImage, pricing,
+  image, title, heading, description, intro, main, testimonials, fullImage, pricing
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -75,7 +75,7 @@ export const ProductPageTemplate = ({
                   </div>
                 </div>
               </div>
-              <Testimonials testimonials={testimonials} />
+              {/* <Testimonials testimonials={testimonials} /> */}
               <div
                 className="full-width-image-container"
                 style={{ backgroundImage: `url(${fullImage})` }}
@@ -93,7 +93,7 @@ export const ProductPageTemplate = ({
 
 export default ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
+  console.log(data)
   return (
     <ProductPageTemplate
       image={frontmatter.image}
